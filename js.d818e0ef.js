@@ -2915,14 +2915,14 @@ require("../scss/style.scss");
 // Promise Задание 1
 var delay = function delay(ms) {
   var DELAY = ms;
-  var promise = new Promise(function (resolve, reject) {
+  return new Promise(function (resolve, reject) {
     setTimeout(function () {
       resolve(DELAY);
       reject();
     }, DELAY);
     return resolve;
-  });
-  return promise;
+  }); // Подумати над рішенням
+  // setTimeout(() => {Promise.resolve(ms)}, ms);
 };
 
 var logger = function logger(time) {
@@ -2960,7 +2960,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "58453" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52168" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
