@@ -6,7 +6,7 @@ import '../scss/style.scss';
 const delay = ms => {
   const DELAY = ms;
 
-  const promise = new Promise((resolve, reject) => {
+  return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(DELAY);
       reject();
@@ -15,9 +15,9 @@ const delay = ms => {
     return resolve;
   });
 
-  return promise;
+  // Подумати над рішенням
+  // setTimeout(() => {Promise.resolve(ms)}, ms);
 };
-
 const logger = time => console.log(`Resolved after ${time}ms`);
 
 delay(2000).then(logger);
