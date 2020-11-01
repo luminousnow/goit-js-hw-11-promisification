@@ -4,19 +4,16 @@ import '../scss/style.scss';
 
 // Promise Задание 1
 const delay = ms => {
-  const DELAY = ms;
-
   return new Promise((resolve, reject) => {
     setTimeout(() => {
-      resolve(DELAY);
-      reject();
-    }, DELAY);
+      resolve(ms);
+    }, ms);
 
     return resolve;
   });
 
-  // Подумати над рішенням
-  // setTimeout(() => {Promise.resolve(ms)}, ms);
+  // Подумати над рішенням для return Promise.resolve
+  // setTimeout(() => {return Promise.resolve(ms)}, ms);
 };
 const logger = time => console.log(`Resolved after ${time}ms`);
 
