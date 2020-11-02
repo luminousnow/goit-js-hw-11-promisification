@@ -2911,27 +2911,6 @@ var _path = require("path");
 var _q = require("q");
 
 require("../scss/style.scss");
-
-// Promise Задание 1
-var delay = function delay(ms) {
-  var DELAY = ms;
-  return new Promise(function (resolve, reject) {
-    setTimeout(function () {
-      resolve(DELAY);
-      reject();
-    }, DELAY);
-    return resolve;
-  }); // Подумати над рішенням
-  // setTimeout(() => {Promise.resolve(ms)}, ms);
-};
-
-var logger = function logger(time) {
-  return console.log("Resolved after ".concat(time, "ms"));
-};
-
-delay(2000).then(logger);
-delay(1000).then(logger);
-delay(1500).then(logger); // Promise Задание 2
 },{"path":"node_modules/path-browserify/index.js","q":"node_modules/q/q.js","../scss/style.scss":"src/scss/style.scss"}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -2960,7 +2939,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "52168" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53692" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
